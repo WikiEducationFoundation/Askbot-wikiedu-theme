@@ -27,6 +27,71 @@ p,
     font-family: $body-font;
 }
 
+//body reset
+body,
+input,
+select,
+textarea,
+.box .js-question-follower-count,
+.question-page .comments .convert-comment,
+.vote-count,
+.answer-votes,
+#searchBar input.searchInput,
+#ground,
+.short-summary .userinfo,
+.js-tag-name,
+.wmd-preview,
+.question-page .post-body,
+.question-page .post-controls a,
+.question-page .post-controls span.dropdown-toggle,
+.question-page .post-controls .answer-convert input,
+.question-page .answer-controls .answer-convert input,
+.question-page .comments .controls a,
+.question-page .comments textarea,
+.question-page .comments .counter,
+.question-page .comments .comment,
+.question-page p.rss a,
+.openid-signin p,
+.meta p,
+.user-profile-edit-page p {
+    font-family: $body-font;
+}
+
+//heading font reset
+#secondaryHeader,
+#questionCount,
+#header,
+#footer h3,
+#listSearchTags,
+h1,
+h1.section-title,
+.box h2,
+.box h3,
+.box p,
+.box label,
+.count,
+.scoreNumber,
+.search-tips,
+.question-page h1,
+.question-page #questionCount,
+.question-page h2.comment-title,
+.question-page #fmanswer h2,
+.revision h3,
+.short-summary h2,
+.short-summary .counts,
+.short-summary .counts .item-count,
+.section-title,
+.user-profile-page h2,
+.tag-right,
+.tag-subscriptions .action,
+.tabBar,
+.notify,
+.vote-number,
+.question-page .vote-number {
+    font-family: $heading-font;
+}
+
+
 .short-summary {
     .answers {
         background: rgb(249, 242, 226);
@@ -34,6 +99,21 @@ p,
     .views {
         background: rgb(248, 230, 228);
     }
+    .votes {
+        background: #eff0f4;
+    }
+    .answers,
+    .views,
+    .votes {
+        border: none;
+    }
+}
+
+.js-tag-name {
+    font-size: 14px;
+    border: none;
+    height: 20px;
+    line-height: 19px;
 }
 
 #ground {
@@ -60,21 +140,6 @@ body.legacy-post {
     }
 }
 */
-#secondaryHeader,
-#questionCount,
-#header,
-#footer h3,
-h1,
-h1.section-title,
-.box h2,
-.question-page h1,
-.short-summary h2,
-.short-summary .counts .item-count,
-.tag-right,
-.tabBar,
-.question-page .vote-number {
-    font-family: $heading-font;
-}
 .vote-number {
     padding: 0 0 5px 0;
 }
@@ -84,6 +149,7 @@ h1.section-title,
 }
 #header {
     background: $dark-color;
+    height: 40px;
 }
 .openid-signin {
     #metaNav a.signin {
@@ -93,16 +159,18 @@ h1.section-title,
 }
 #userToolsNav {
     margin: 0 !important;
-    height: 34px;
+    height: 40px;
     padding: 0;
     a,
     .user-info,
     .user-micro-info {
         color: #dadada;
-        line-height: 34px;
+        line-height: 40px;
     }
 }
 #metaNav {
+    height: 40px;
+    line-height: 40px;
     position: absolute;
     margin: 0 -8px 0 0;
     right: 0;
@@ -114,13 +182,6 @@ h1.section-title,
         height: 27px;
     }
 
-    a.signin {
-        background: #e8d895;
-        padding: 5px 8px;
-        @include border-radius(4px);
-        @include box-shadow(0 0 2px 2px white);
-    }
-    
     a.on {
         font-weight: normal;
         color: $pale-color;
@@ -170,9 +231,6 @@ h1.section-title,
         border-left: 1px solid $pale-color;
         /*background: url(../images/sprites.png) no-repeat -7px -242px;*/
         position: relative;
-        &.lang-nav {
-            padding: 0;
-        }
     }
     span.dropdown-toggle:hover {
         background: $pale-color;
@@ -184,14 +242,6 @@ h1.section-title,
             left: -1px;
             padding: 4px 0 10px 0;
             top: 36px;
-        }
-        &.lang-nav {
-            .dropdown-menu {
-                padding-top: 10px;
-                left: -14px;
-                min-width: auto !important;
-                top: 14px;
-            }
         }
     }
     .dropdown-menu {
@@ -218,25 +268,30 @@ h1.section-title,
             text-decoration: none;
         }
     }
-    .lang-nav {
-        float: right;
-        color: $dark-color;
-        font-size: 16px;
-        line-height: 16px;
-        height: 16px;
-        @include text-shadow(#fff 0 1px 1px);
-        li {
-            background: transparent;
-        }
-        .dropdown-menu li:hover {
-            background: transparent !important;
-        }
-    }
 }
+
 #secondaryHeader {
     background: $pale-color;
     border: none;
     margin-bottom: 7px;
+}
+
+.lang-nav {
+    background: $dark-color;
+    font-size: 16px;
+    line-height: 16px;
+    height: 16px;
+    .dropdown-menu {
+        background: $dark-color;
+        min-width: auto !important;
+        top: 20px;
+    }
+    a {
+        background: $dark-color;
+        height: 18px !important;
+        line-height: 18px !important;
+        text-decoration: none !important;
+    }
 }
 .scope-selector {
     color: #e1e1e1;
@@ -477,7 +532,6 @@ input[type="submit"].link {
     .comments .comment-body {
         font-size: 14px;
         max-width: 650px;
-        overflow-x: scroll;
         p {
             font-size: 14px;
         }
@@ -532,4 +586,10 @@ input[type="submit"].link {
 
 .copyright {
     color: #eee;
+}
+
+@media screen and (max-width: 960px) {
+    #homeButton {
+        background: none;
+    }
 }
