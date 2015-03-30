@@ -16,14 +16,37 @@ under the License.
 @import "compass/css3";
 $body-font: Georgia, serif;
 $heading-font: Georgia, serif;
-$dark-color: rgb(73, 78, 72);
+$dark-color: #4c4c4c;
 $pale-color: rgb(134, 141, 170);
+$light-color: #e8e9ed;
+$title-color: #646D92;
+$placeholder-color: #e0e0e0;
+$tag-bg-color: #f5f5f5;
+$tag-border-color: #e7e7e7;
+$tag-text-color: #5b5b5b;
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $placeholder-color;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $placeholder-color;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $placeholder-color;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    $placeholder-color;
+}
 
 body,
 p,
 .short-summary .counts,
 #footer ul,
-.short-summary .userinfo {
+.short-summary .userinfo,
+.short-summary .userinfo a {
+    color: $tag-text-color;
     font-family: $body-font;
 }
 
@@ -91,16 +114,28 @@ h1.section-title,
     font-family: $heading-font;
 }
 
+#questionCount,
+.question-page h1 a,
+.question-page h2.comment-title,
+.question-page #questionCount { 
+    color: $title-color;
+}
 
 .short-summary {
+    a {
+        color: $title-color;
+    }
     .answers {
-        background: rgb(249, 242, 226);
+        background: #F8F1E5;
+        color: #F3B73B;
     }
     .views {
-        background: rgb(248, 230, 228);
+        background: #F5E8E4;
+        color: #E7664C;
     }
     .votes {
-        background: #eff0f4;
+        background: $light-color;
+        color: $title-color;
     }
     .answers,
     .views,
@@ -110,10 +145,14 @@ h1.section-title,
 }
 
 .js-tag-name {
-    font-size: 14px;
+    background: $tag-bg-color;
     border: none;
+    color: $tag-text-color;
+    @include box-shadow(none);
+    font-size: 14px;
     height: 20px;
     line-height: 19px;
+    outline: 1px solid $tag-border-color !important;
 }
 
 #ground {
@@ -144,7 +183,7 @@ body.legacy-post {
     padding: 0 0 5px 0;
 }
 .tabBar {
-    background: lighten($pale-color, 35%);//rgb(234, 235, 239);
+    background: $light-color;
     @include border-radius(0);
 }
 #header {
@@ -184,11 +223,8 @@ body.legacy-post {
 
     a.on {
         font-weight: normal;
-        color: $pale-color;
-        background: $dark-color !important;
-        @include border-radius(5px);
-        @include text-shadow(0 0 0);
-        @include box-shadow(0 0 2px 2px white);
+        color: white;
+        background: $pale-color !important;
     }
 
     a.moderation-items-count {
@@ -353,7 +389,8 @@ body.legacy-post {
     margin-left: -10px;
 }
 #searchBar {
-    @include box-shadow(inset #eee 1px 1px 2px 1px);
+    @include box-shadow(none);
+    border: none;
     input.searchInput {
         font-family: $body-font;
         font-style: italic;
@@ -385,9 +422,10 @@ body.legacy-post {
 }
 
 .box {
+    color: #787878;
     h2,
     .contributorback {
-        background: lighten($pale-color, 35%);
+        background: $tag-bg-color;
         font-size: 16px !important;
         font-weight: bold;
         padding: 0 10px 0 0;
@@ -541,7 +579,7 @@ input[type="submit"].link {
         width: auto;
         .post-update-info {
             @include border-radius(0);
-            background: lighten($pale-color, 35%); 
+            background: $tag-bg-color;
             @include box-shadow(none);
             float: none;
             min-height: 46px;
@@ -586,6 +624,12 @@ input[type="submit"].link {
 
 .copyright {
     color: #eee;
+}
+
+.tabsA, .tabsC {
+    .label, a.on, a:hover {
+        color: $title-color;
+    }
 }
 
 @media screen and (max-width: 960px) {
