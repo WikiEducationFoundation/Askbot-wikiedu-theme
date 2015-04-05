@@ -727,13 +727,31 @@ input[type="submit"].link {
   float: none;
   min-height: 46px;
 }
+/* line 607, ../sass/extra.scss */
+.question-page .comments .controls a {
+  background: none;
+  color: #848daa;
+  padding-left: 0;
+}
+/* line 611, ../sass/extra.scss */
+.question-page .comments .controls a:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: '\f112';
+  padding-right: 5px;
+}
 
-/* line 609, ../sass/extra.scss */
+/* line 626, ../sass/extra.scss */
 .custom-header,
 .openid-signin .custom-header {
   background: #4c4c4c;
 }
-/* line 612, ../sass/extra.scss */
+/* line 629, ../sass/extra.scss */
 .custom-header a,
 .custom-header a:hover,
 .custom-header a:visited,
@@ -742,18 +760,18 @@ input[type="submit"].link {
 .openid-signin .custom-header a:visited {
   color: orange;
 }
-/* line 617, ../sass/extra.scss */
+/* line 634, ../sass/extra.scss */
 .custom-header p,
 .openid-signin .custom-header p {
   color: #868daa;
   margin: 0 0 6px;
 }
-/* line 620, ../sass/extra.scss */
+/* line 637, ../sass/extra.scss */
 .custom-header p:last-child,
 .openid-signin .custom-header p:last-child {
   margin: 0;
 }
-/* line 624, ../sass/extra.scss */
+/* line 641, ../sass/extra.scss */
 .custom-header .content-wrapper,
 .openid-signin .custom-header .content-wrapper {
   padding: 8px;
@@ -762,7 +780,7 @@ input[type="submit"].link {
   border-radius: 6px;
 }
 
-/* line 632, ../sass/extra.scss */
+/* line 649, ../sass/extra.scss */
 .flat-page #ContentFull img {
   border: 1px solid #aaa;
   margin: 6px 0;
@@ -773,27 +791,27 @@ input[type="submit"].link {
   -webkit-box-shadow: 0 0 14px #ccc;
   box-shadow: 0 0 14px #ccc;
 }
-/* line 639, ../sass/extra.scss */
+/* line 656, ../sass/extra.scss */
 .flat-page li {
   margin-bottom: 20px;
 }
 
-/* line 644, ../sass/extra.scss */
+/* line 661, ../sass/extra.scss */
 .copyright {
   color: #eee;
 }
 
-/* line 649, ../sass/extra.scss */
+/* line 666, ../sass/extra.scss */
 .tabsA a, .tabsC a {
   color: #848daa;
 }
-/* line 652, ../sass/extra.scss */
+/* line 669, ../sass/extra.scss */
 .tabsA .label, .tabsA a.on, .tabsA a:hover, .tabsC .label, .tabsC a.on, .tabsC a:hover {
   color: #646D92;
 }
 
 @media screen and (max-width: 960px) {
-  /* line 658, ../sass/extra.scss */
+  /* line 675, ../sass/extra.scss */
   #homeButton {
     background: none;
   }
