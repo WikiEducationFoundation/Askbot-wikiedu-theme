@@ -231,7 +231,7 @@ body.legacy-post {
         padding: 0;
         margin-top: -1px;
         &:hover {
-            color: #ebff88 !important;
+            color: white !important;
         }
     }
 }
@@ -335,6 +335,10 @@ body.legacy-post {
     }
 }
 
+#userToolsNav a:hover, #metaNav a:hover {
+    color: white;
+}
+
 #secondaryHeader {
     background: $pale-color;
     border: none;
@@ -357,6 +361,9 @@ body.legacy-post {
         line-height: 18px !important;
         text-decoration: none !important;
     }
+}
+#scopeNav a:hover {
+    color: white;
 }
 .scope-selector {
     color: #e1e1e1;
