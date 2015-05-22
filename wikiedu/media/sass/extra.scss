@@ -224,6 +224,16 @@ body.legacy-post {
         color: #dadada;
         line-height: 40px;
     }
+    #signin-form input {
+        color: #dadada !important;
+        text-decoration: underline !important;
+        border: none;
+        padding: 0;
+        margin-top: -1px;
+        &:hover {
+            color: #ebff88 !important;
+        }
+    }
 }
 #metaNav {
     height: 40px;
