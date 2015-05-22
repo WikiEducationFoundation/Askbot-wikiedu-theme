@@ -227,7 +227,7 @@ body.legacy-post {
     #signin-form input {
         color: #dadada !important;
         text-decoration: underline !important;
-        border: none;
+        border: none !important;
         padding: 0;
         margin-top: -1px;
         &:hover {
